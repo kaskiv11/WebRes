@@ -4,7 +4,7 @@
 ***WebRes*** is an online service that helps beginners and professionals to teach and demonstrate their own portfolio promotion projects around the world.
 
 
-##Installation:
+## Installation:
 <hr>
 
 1. Clone https://github.com/kaskiv11/WebRes.git
@@ -14,9 +14,9 @@
 >>npm install
 
 3. Open http://localhost:3000 to view it in the browser.
-##Accessibility and Testing
+## Accessibility and Testing
 <hr>
-sfsdf
+
 1. To Log in the App, simply create an account via our Registration Page.
 
 2. Have a look at our test user with the following credentials:
@@ -25,7 +25,7 @@ sfsdf
 
 
 
-##Technology Stack
+## Technology Stack
 <hr>
 
 
@@ -44,7 +44,7 @@ sfsdf
 
 <a href="https://reactjs.org/">ReactJs </a> - JavaScript Library
 
-##Development tools & Methodology
+## Development tools & Methodology
 <hr>
 
 - Scrum
