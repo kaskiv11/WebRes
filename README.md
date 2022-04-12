@@ -5,7 +5,6 @@
 
 
 ## Installation:
-<hr>
 
 1. Clone https://github.com/kaskiv11/WebRes.git
 
@@ -15,7 +14,6 @@
 
 3. Open http://localhost:3650 to view it in the browser.
 ## Accessibility and Testing
-<hr>
 
 1. To Log in the App, simply create an account via our Registration Page.
 
@@ -26,7 +24,6 @@
 
 
 ## Technology Stack
-<hr>
 
 
 * <a href="https://www.mysql.com/" target="_blank">MySQL </a> - Database used<br>
@@ -45,7 +42,6 @@
 <a href="https://reactjs.org/">ReactJs </a> - JavaScript Library
 
 ## Development tools & Methodology
-<hr>
 
 - Scrum
 - Trello
