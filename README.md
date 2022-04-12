@@ -13,7 +13,7 @@
 
 >>npm install
 
-3. Open http://localhost:3000 to view it in the browser.
+3. Open http://localhost:3650 to view it in the browser.
 ## Accessibility and Testing
 <hr>
 
