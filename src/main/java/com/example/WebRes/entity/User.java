@@ -57,8 +57,10 @@ public class User {
     @Column(name = "isFrozen")
     private Boolean isFrozen;
 
-    @Column(name = "role")
-    private Role role;
+    //@ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    //@CollectionTable(name = "user_role", joinColumns = @JoinColumn(referencedColumnName = "user_id"))
+    //@Enumerated(EnumType.STRING)
+    private String role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<UserInterest> userInterests;
@@ -69,5 +71,9 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Comment> comments;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Follower> followers;
+
 
 }

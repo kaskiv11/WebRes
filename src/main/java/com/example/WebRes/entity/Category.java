@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -17,23 +16,11 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Category> categories;
-
-    @ManyToOne
-    @JoinColumn(name="post_id",nullable = false)
-    private Post post;
-
+    @Column(name = "title")
+    private String title;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }
