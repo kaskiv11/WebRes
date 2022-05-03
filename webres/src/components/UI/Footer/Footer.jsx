@@ -10,9 +10,9 @@ const Footer = () => {
                     <div className="footer__info d-flex justify-content-between">
                         <div className="col-12 col-md-3">
                             <div className="footer__left">
-                                <div className="logo">
-                                    <Link to="/posts"></Link>
-                                </div>
+                                <Link to="/posts">
+                                    <div className="logo"></div>
+                                </Link>
                                 <p className="footer__description">
                                     WebRes is a platform to help you express yourself to the world and find inspiration in other works.
                                 </p>

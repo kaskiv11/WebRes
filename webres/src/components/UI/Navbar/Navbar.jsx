@@ -22,13 +22,14 @@ const Navbar = () => {
     }
 
     return (
-        <header className="navbar container">
+        <header className="header">
             <div className="container">
-                <div className="row d-flex align-items-center">
-                    <div className="col-2">
-                        <div className="logo">
-                            <Link to="/posts"></Link>
-                        </div>
+                <div className="row align-items-center">
+                    <div className="col-3">
+                        <Link to="/posts">
+                            <div className="logo"></div>
+                        </Link>
+
                     </div>
                     <div className="col-4">
                         <div className="navbar__links">
@@ -37,8 +38,8 @@ const Navbar = () => {
                             <Link to="/contact">Contact</Link>
                         </div>
                     </div>
-                    <div className="col-6 ms-auto d-flex">
-                        <MyButton /*style={{marginLeft: 'auto'}}*/ onClick={() => setModal(true)} className={'navbar__add-project btn'}>
+                    <div className="col-5 d-flex">
+                        <MyButton className={'navbar__add-project btn'} onClick={() => setModal(true)}>
                             Add Project
                         </MyButton>
                         <MyModal visible={modal} setVisible={setModal}>
