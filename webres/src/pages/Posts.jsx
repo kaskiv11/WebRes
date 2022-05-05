@@ -57,28 +57,28 @@ function Posts() {
         <main className="main">
             <div className="App">
                 <div className="container">
-                    {/*<MyButton style={{marginTop: 30}} onClick={() => setModal(true)} className={'btn-invert'}>*/}
-                    {/*    Add Project*/}
-                    {/*</MyButton>*/}
-                    {/*<MyModal visible={modal} setVisible={setModal}>*/}
-                    {/*    <PostForm create={createPost}/>*/}
-                    {/*</MyModal>*/}
-                    {/*<hr style={{margin: '15px 0'}}/>*/}
-                    {/*<PostFilter*/}
-                    {/*    filter={filter}*/}
-                    {/*    setFilter={setFilter}*/}
-                    {/*/>*/}
-                    {/*<MySelect*/}
-                    {/*    value={limit}*/}
-                    {/*    onChange={value => setLimit(value)}*/}
-                    {/*    defaultValue="Number of elements per page"*/}
-                    {/*    options={[*/}
-                    {/*        {value: 5, name: '5'},*/}
-                    {/*        {value: 10, name: '10'},*/}
-                    {/*        {value: 25, name: '25'},*/}
-                    {/*        {value: -1, name: 'All'},*/}
-                    {/*    ]}*/}
-                    {/*/>*/}
+                   {/* <MyButton style={{marginTop: 30}} onClick={() => setModal(true)} className={'btn-invert'}>
+                        Add Project
+                    </MyButton>
+                    <MyModal visible={modal} setVisible={setModal}>
+                        <PostForm create={createPost}/>
+                    </MyModal>
+                    <hr style={{margin: '15px 0'}}/>
+                    <PostFilter
+                        filter={filter}
+                        setFilter={setFilter}
+                    />
+                    <MySelect
+                        value={limit}
+                        onChange={value => setLimit(value)}
+                        defaultValue="Number of elements per page"
+                        options={[
+                            {value: 5, name: '5'},
+                            {value: 10, name: '10'},
+                            {value: 25, name: '25'},
+                            {value: -1, name: 'All'},
+                        ]}
+                    />*/}
                     {postError &&
                         <h1>Error ${postError}</h1>
                     }

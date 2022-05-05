@@ -38,13 +38,13 @@ const Navbar = () => {
                             <Link to="/contact">Contact</Link>
                         </div>
                     </div>
-                    <div className="col-5 d-flex">
-                        <MyButton className={'navbar__add-project btn'} onClick={() => setModal(true)}>
-                            Add Project
-                        </MyButton>
-                        <MyModal visible={modal} setVisible={setModal}>
-                            <PostForm create={createPost}/>
-                        </MyModal>
+                    <div className="offset-3 col-2 d-flex justify-content-end">
+                        {/*<MyButton className={'navbar__add-project btn'} onClick={() => setModal(true)}>*/}
+                        {/*    Add Project*/}
+                        {/*</MyButton>*/}
+                        {/*<MyModal visible={modal} setVisible={setModal}>*/}
+                        {/*    <PostForm create={createPost}/>*/}
+                        {/*</MyModal>*/}
 
                         <MyButton onClick={logout} className={'btn-invert'}>
                             Log out

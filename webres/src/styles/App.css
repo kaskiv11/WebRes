@@ -68,6 +68,10 @@ a:hover {
     color: #000!important;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
+
 .text-field__input {
     display: block;
     height: 45px;
@@ -228,6 +232,36 @@ a:hover {
 
 .post-wrap__photo-item:not(:last-child){
     margin-right: 20px;
+}
+
+.post-wrap .thumbnails  .thumbnail{
+    /*width: 210px!important;*/
+    height: 158px!important;
+    background: #AF93FF;
+    border-radius: 20px;
+    object-fit: cover;
+    z-index: 10000!important;
+}
+
+.carousel-container{
+    background-color: #AF93FF!important;
+}
+
+.fade:not(.show) {
+    opacity: 1!important;
+}
+
+.post-wrap .thumbnails  .active-thumbnail{
+    box-shadow: 0 0 6px 8px #AF93FF;
+    border: none;
+}
+
+.post-wrap .thumbnails{
+    padding: 10px;
+}
+
+.thumbnail {
+    margin: 0 10px!important;
 }
 
 .post{
@@ -497,9 +531,132 @@ a:hover {
 .post-comments-add__smile{
     background: url("../img/smile.png") no-repeat center center / cover;
     width: 30px;
-    height: 27px;
+    height: 30px;
 }
 .post-comments-add{
     margin-bottom: 40px;
 }
 
+.post-comments-add__form-control{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Profile ------------------------------ */
+
+.profile-user{
+    padding: 30px 0 100px;
+}
+
+.profile-user__photo{
+    width: 215px;
+    height: 215px;
+    border-radius: 50%;
+    margin-bottom: 17px;
+    background-color: #C4C4C4;
+    overflow: hidden;
+}
+
+.profile-user__name{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.profile-post__add-projects{
+    border: 1px solid #E4DDFA;
+    border-radius: 3px;
+    padding: 40px 0;
+}
+
+.profile-post__add-plus{
+    background: url("../img/add.png") no-repeat center center / cover;
+    width: 80px!important;
+    height: 80px!important;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.profile-post__add-project{
+    font-size: 30px;
+}
+
+.profile-tabs{
+    padding: 40px 20px;
+    width: 110px;
+    background: #E1DEDE;
+    border-radius: 20px;
+}
+
+.react-tabs__tab-list{
+    border-bottom: 0!important;
+    display: flex;
+    flex-direction: column;
+    margin: 0!important;
+}
+
+.react-tabs__tab{
+    background: #E1DEDE;
+}
+
+.react-tabs__tab:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.react-tabs__tab--selected {
+    background: #E1DEDE!important;
+    border: 0!important;
+    border-radius: 0!important;
+}
+
+.react-tabs__tab--selected::after{
+    content: none!important;
+}
+
+.react-tabs__tab .profile-tabs__file{
+    width: 50px;
+    height: 50px;
+    background: url("../img/tabs/files.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab--selected .profile-tabs__file{
+    width: 50px;
+    height: 50px;
+    background: url("../img/tabs/files-v.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab .proprofile-tabs__like{
+    width: 50px;
+    height: 50px;
+    background: url("../img/tabs/like.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab--selected .proprofile-tabs__like{
+    width: 50px;
+    height: 50px;
+    background: url("../img/tabs/like-v.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab .profile-tabs__edit{
+    width: 65px;
+    height: 52px;
+    background: url("../img/tabs/fa_edit.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab--selected .profile-tabs__edit{
+    width: 65px;
+    height: 52px;
+    background: url("../img/tabs/fa_edit-v.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab .profile-tabs__admin{
+    width: 50px;
+    height: 50px;
+    background: url("../img/tabs/wpf_administrator.svg") no-repeat center center / cover;
+}
+
+.react-tabs__tab--selected .profile-tabs__admin{
+    width: 50px;
+    height: 50px;
+    background: url("../img/tabs/wpf_administrator-v.svg") no-repeat center center / cover;
+}

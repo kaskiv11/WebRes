@@ -21,8 +21,11 @@ const PostItem = (props) => {
                     <img src={img} alt="" className="post__img" />
                 </div>
                 <div className="post__btns d-flex">
-                    <div>
-                        {props.post.id}. {props.post.title}
+                    <div className="d-flex">
+                        <div className="cursor-pointer" onClick={() => router.push(`/profile/${props.post.id}`)}>
+                            {props.post.id})
+                        </div>
+                         {props.post.title}
                     </div>
                     {/* <MyButton onClick={() => router.push(`/posts/${props.post.id}`)}>
                         Open
@@ -32,9 +35,9 @@ const PostItem = (props) => {
                     </MyButton>
                 </div>
             </div>
-            <MyModal visible={modal} setVisible={setModal}>
-                <ModalPostWindow/>
-            </MyModal>
+            {/*<MyModal visible={modal} setVisible={setModal}>*/}
+            {/*    <ModalPostWindow/>*/}
+            {/*</MyModal>*/}
         </div>
         
     );
