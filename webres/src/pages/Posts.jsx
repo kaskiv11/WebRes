@@ -57,7 +57,7 @@ function Posts() {
         <main className="main">
             <div className="App">
                 <div className="container">
-                   {/* <MyButton style={{marginTop: 30}} onClick={() => setModal(true)} className={'btn-invert'}>
+                    <MyButton style={{marginTop: 30}} onClick={() => setModal(true)} className={'btn-invert'}>
                         Add Project
                     </MyButton>
                     <MyModal visible={modal} setVisible={setModal}>
@@ -78,7 +78,7 @@ function Posts() {
                             {value: 25, name: '25'},
                             {value: -1, name: 'All'},
                         ]}
-                    />*/}
+                    />
                     {postError &&
                         <h1>Error ${postError}</h1>
                     }

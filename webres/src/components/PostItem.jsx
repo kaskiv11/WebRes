@@ -10,36 +10,36 @@ import ModalPostWindow from "./ModalPostWindow";
 const PostItem = (props) => {
     const router = useHistory()
 
-    const [modal, setModal] = useState(false);
-
     return (
         <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
             <div className="post">
                 <div className="post__content ratio ratio-4x3"
-                     onClick={() => router.push(`/posts/${props.post.id}`)}
-                    /* onClick={() => setModal(true)}*/>
+                     onClick={() => router.push(`/posts/${props.post.id}`)}>
                     <img src={img} alt="" className="post__img" />
                 </div>
-                <div className="post__btns d-flex">
-                    <div className="d-flex">
-                        <div className="cursor-pointer" onClick={() => router.push(`/profile/${props.post.id}`)}>
-                            {props.post.id})
-                        </div>
-                         {props.post.title}
+                <div className="post__info d-flex align-items-center">
+                    <div className="post__info-img cursor-pointer" onClick={() => router.push(`/profile/${props.post.id}`)}>
+                        {props.post.id})
+                    </div>
+                    <div className="post__info-username cursor-pointer">
+                        {props.post.title}
+                    </div>
+                    <div className="post__info-like d-flex align-items-center">
+                        99
+                    </div>
+                    <div className="post__info-comments d-flex align-items-center">
+                        15
                     </div>
                     {/* <MyButton onClick={() => router.push(`/posts/${props.post.id}`)}>
                         Open
                     </MyButton> */}
-                    <MyButton onClick={() => props.remove(props.post)}>
-                        Delete
-                    </MyButton>
+                    {/*<MyButton onClick={() => props.remove(props.post)}>*/}
+                    {/*    Delete*/}
+                    {/*</MyButton>*/}
                 </div>
             </div>
-            {/*<MyModal visible={modal} setVisible={setModal}>*/}
-            {/*    <ModalPostWindow/>*/}
-            {/*</MyModal>*/}
         </div>
-        
+
     );
 };
 

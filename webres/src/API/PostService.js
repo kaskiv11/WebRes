@@ -16,16 +16,6 @@ export default class PostService {
         return response;
     }
 
-    static async getUsersById(id) {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users/' + id)
-        return response;
-    }
-
-    static async getPhotosById(id) {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/photos/' + id)
-        return response;
-    }
-
     static async getCommentsByPostId(id) {
         const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
         return response;

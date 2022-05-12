@@ -4,7 +4,7 @@ import MySelect from "./UI/select/MySelect";
 
 const PostFilter = ({filter, setFilter}) => {
     return (
-        <div >
+        <div className="d-flex align-items-center justify-content-between">
             <div className="text-field__icon text-field__icon_search post-filter">
                 <MyInput
                     value={filter.query}

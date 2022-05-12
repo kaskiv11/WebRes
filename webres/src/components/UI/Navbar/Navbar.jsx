@@ -45,10 +45,27 @@ const Navbar = () => {
                         {/*<MyModal visible={modal} setVisible={setModal}>*/}
                         {/*    <PostForm create={createPost}/>*/}
                         {/*</MyModal>*/}
+                        {isAuth ?
+                            <div>
+                                <MyButton onClick={logout} className={'btn-invert'}>
+                                    Log out
+                                </MyButton>
+                            </div>
+                            :
+                            <div className={'d-flex'}>
+                                <MyButton className={'btn'}>
+                                    <Link to="/login">
+                                        Login
+                                    </Link>
+                                </MyButton>
+                                <MyButton className={'btn-invert'}>
+                                    <Link to="/registration">
+                                        Sign Up
+                                    </Link>
+                                </MyButton>
+                            </div>
+                        }
 
-                        <MyButton onClick={logout} className={'btn-invert'}>
-                            Log out
-                        </MyButton>
                     </div>
 
                 </div>

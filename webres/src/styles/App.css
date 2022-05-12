@@ -128,7 +128,49 @@ a:hover {
 
 .post {
     border: 1px solid #782AD5;
-    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.post__info{
+    padding: 8px;
+}
+
+.post__info-img{
+    width: 40px;
+    height: 25px;
+    margin-right: 4px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #C4C4C4;
+}
+
+.post__info-username{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.post__info-like{
+    margin: 0 5px;
+}
+
+.post__info-like::before{
+    content: ' ';
+    display: block;
+    width: 17px;
+    height: 15px;
+    margin-right: 4px;
+    background: url("../img/post-like.png") no-repeat center center / cover;
+}
+
+.post__info-comments::before{
+    content: ' ';
+    display: block;
+    width: 17px;
+    height: 15px;
+    margin-right: 4px;
+    background: url("../img/post-comments.png") no-repeat center center / cover;
 }
 
 .myContainer{
@@ -317,7 +359,7 @@ a:hover {
 .post-filter{
     width: 50%;
 }
-
+.post-filter textarea,
 .post-filter input{
     width: 100%;
     border: 1px solid #782AD5;
@@ -545,6 +587,10 @@ a:hover {
 
 /* Profile ------------------------------ */
 
+.profile{
+    font-family: 'Sen', sans-serif;
+}
+
 .profile-user{
     padding: 30px 0 100px;
 }
@@ -599,7 +645,7 @@ a:hover {
     background: #E1DEDE;
 }
 
-.react-tabs__tab:not(:last-child){
+.profile-tabs .react-tabs__tab:not(:last-child){
     margin-bottom: 20px;
 }
 
@@ -659,4 +705,75 @@ a:hover {
     width: 50px;
     height: 50px;
     background: url("../img/tabs/wpf_administrator-v.svg") no-repeat center center / cover;
+}
+
+.profile-tab-edit{
+    margin-bottom: 20px;
+}
+
+.profile-tab-edit .react-tabs__tab-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-tab-edit .react-tabs__tab-list .react-tabs__tab{
+    background-color: #FFFFFF;
+    font-size: 24px;
+}
+
+.profile-tab-edit .react-tabs__tab-list .react-tabs__tab:not(:last-child){
+    margin-right: 20px;
+}
+
+.profile-tab-edit .react-tabs__tab--selected{
+    background: #FFFFFF!important;
+    color: #782AD5;
+}
+
+
+.profile-tab-edit__general .form-group{
+    margin-bottom: 20px;
+}
+
+.profile-tab-edit__general label{
+    font-weight: 700;
+    margin: 0 0 10px 20px;
+}
+
+.exampleFormControlFile1{
+    width: 105px;
+    height: 105px;
+    background-color: #EDEDED;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 20px 10px 0px!important;
+}
+
+.post-filter textarea{
+    height: auto;
+}
+
+.profile-tab-edit__password .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-tab-edit__password label {
+    font-weight: 700;
+    margin: 0 0 10px 20px;
+}
+
+.admin-users__wrap{
+    border: 1px solid #C2C2C2;
+    border-radius: 25px;
+    padding: 11px 16px;
+    margin-top: 20px;
+}
+
+.admin-users__img{
+    width: 40px;
+    height: 40px;
+    background-color: #EDEDED;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
 }

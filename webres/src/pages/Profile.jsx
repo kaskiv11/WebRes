@@ -9,6 +9,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import img from "../img/Usign-Gradients-Featured-Image.png";
 import MyButton from "../components/UI/button/MyButton";
+import EditProfile from "../components/Edit-profile";
+import AdminProfile from "../components/Admin-profile";
 
 const Profile = () => {
     const router = useHistory()
@@ -24,7 +26,7 @@ const Profile = () => {
     }, [])
 
     return (
-        <main className="main">
+        <main className="main profile">
             {isLoading
                 ? <Loader/>
                 :
@@ -40,7 +42,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <Tabs>
-                        <div className="row">
+                        <div className="row mb-5">
                         <div className="col-2">
                             <div className="profile-tabs">
                                 <TabList>
@@ -98,22 +100,33 @@ const Profile = () => {
                                 </div>
                             </TabPanel>
                             <TabPanel>
-                                <div className="col-3">
-                                    <h2>Any content 2</h2>
+                                <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div className="post">
+                                        <div className="post__content ratio ratio-4x3">
+                                            <img src={img} alt="" className="post__img" />
+                                        </div>
+                                        <div className="post__info d-flex align-items-center">
+                                            <div className="post__info-img cursor-pointer">
+                                                12
+                                            </div>
+                                            <div className="post__info-username cursor-pointer">
+                                                username
+                                            </div>
+                                            <div className="post__info-like d-flex align-items-center">
+                                                99
+                                            </div>
+                                            <div className="post__info-comments d-flex align-items-center">
+                                                15
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </TabPanel>
                             <TabPanel>
-                                <div className="col-3">
-                                    <h2>Any content 3</h2>
-                                </div>
-
+                                <EditProfile></EditProfile>
                             </TabPanel>
                             <TabPanel>
-                                <div className="col-3">
-                                    <h2>Any content 4</h2>
-                                </div>
-
+                                <AdminProfile></AdminProfile>
                             </TabPanel>
                         </div>
                     </div>
