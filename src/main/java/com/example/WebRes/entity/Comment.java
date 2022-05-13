@@ -19,11 +19,11 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "first_name")
+    @Column(name = "content")
     private String content;
 
-    @Column(name = "last_name")
-    private Date created_date;
+    @Column(name = "created_date")
+    private Date createdDate;
 
     @ManyToOne
     @JoinColumn(name="user_id",nullable = false)
