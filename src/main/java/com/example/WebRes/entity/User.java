@@ -10,6 +10,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -57,7 +58,9 @@ public class User {
     @Column(name = "isFrozen")
     private Boolean isFrozen;
 
-    @Column(name = "role")
+    //@ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    //@CollectionTable(name = "user_role", joinColumns = @JoinColumn(referencedColumnName = "user_id"))
+    //@Enumerated(EnumType.STRING)
     private Role role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
@@ -69,5 +72,9 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Comment> comments;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Follower> followers;
+
 
 }
