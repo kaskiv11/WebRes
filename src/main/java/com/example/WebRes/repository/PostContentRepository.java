@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PostContentRepository extends CrudRepository<PostContent, Long> {
+    PostContent findPostContentByContent(byte[] content);
+    PostContent findByName(String name);
 }

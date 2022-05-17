@@ -16,8 +16,11 @@ public class Follower {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "city")
-    @Size(min=2, message = "Не менше 5 знаків")
-    private String city;
+
+    @ManyToOne
+    @JoinColumn(name="user_id",nullable = false)
+    private User user;
+
+
 
 }

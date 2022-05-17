@@ -17,6 +17,11 @@ public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "country")
+    @Size(min=2, message = "Не менше 5 знаків")
+    private String country;
+
     @Column(name = "city")
     @Size(min=2, message = "Не менше 5 знаків")
     private String city;
