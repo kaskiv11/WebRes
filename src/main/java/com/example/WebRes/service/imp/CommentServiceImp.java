@@ -34,7 +34,7 @@ public class CommentServiceImp implements CommentService {
     }
 
     @Override
-    public Comment findFollowerById(long commentId) {
+    public Comment findCommentById(long commentId) {
         return commentRepository.findCommentById(commentId);
     }
 
