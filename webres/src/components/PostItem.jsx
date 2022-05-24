@@ -11,7 +11,7 @@ const PostItem = (props) => {
     const router = useHistory()
 
     return (
-        <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+        <div className="col-12 col-md-6 col-lg-3">
             <div className="post">
                 <div className="post__content ratio ratio-4x3"
                      onClick={() => router.push(`/posts/${props.post.id}`)}>

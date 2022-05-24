@@ -12,7 +12,9 @@ import Loader from "../components/UI/Loader/Loader";
 import Pagination from "../components/UI/pagination/Pagination";
 import {useObserver} from "../hooks/useObserver";
 import MySelect from "../components/UI/select/MySelect";
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import {Link} from "react-router-dom";
 
 function Posts() {
     const [posts, setPosts] = useState([])
@@ -56,8 +58,31 @@ function Posts() {
     return (
         <main className="main">
             <div className="App">
+                <section className='background'>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="billboard">
+                                    <div className="col-12 col-lg-6 content_main">
+                                        <h1 className="site_name"> WEB SOLUTION</h1>
+                                        <h4 className="site_descr">A service that helps beginners and professionals
+                                            to spread and demonstrate their own
+                                            projectsto promote the portfolio around the
+                                            world. </h4>
+                                        <Link to="/create">
+                                            <button className="main_button"> Add project</button>
+                                        </Link>
+                                    </div>
+                                    <div className="col-6 content_image d-none d-lg-flex">
+                                        <img alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div className="container">
-                    <MyButton style={{marginTop: 30}} onClick={() => setModal(true)} className={'btn-invert'}>
+                    {/*<MyButton style={{marginTop: 30}} onClick={() => setModal(true)} className={'btn-invert'}>
                         Add Project
                     </MyButton>
                     <MyModal visible={modal} setVisible={setModal}>
@@ -78,12 +103,12 @@ function Posts() {
                             {value: 25, name: '25'},
                             {value: -1, name: 'All'},
                         ]}
-                    />
+                    />*/}
                     {postError &&
                         <h1>Error ${postError}</h1>
                     }
                     <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Posts"/>
-                    <div ref={lastElement} style={{height: 20, background: 'red'}}/>
+                    <div ref={lastElement} style={{height: 0, background: 'red'}}/>
                     {isPostsLoading &&
                         <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}><Loader/></div>
                     }

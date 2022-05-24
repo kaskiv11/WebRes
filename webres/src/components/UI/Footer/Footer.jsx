@@ -7,8 +7,8 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="footer__info d-flex justify-content-between">
-                        <div className="col-12 col-md-3">
+                    <div className="footer__info d-flex justify-content-between flex-column flex-md-row">
+                        <div className="col-12 col-md-5 col-lg-3">
                             <div className="footer__left">
                                 <Link to="/posts">
                                     <div className="logo"></div>
@@ -18,7 +18,7 @@ const Footer = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-12 col-md-3">
+                        <div className="col-12 col-md-5 col-lg-3">
                             <div className="footer__right ">
                                 <div className="text-field__icon text-field__icon_search">
                                     <MyInput className="text-field__input" type="text" placeholder="Search"/>

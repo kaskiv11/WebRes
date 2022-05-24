@@ -43,10 +43,10 @@ const AdminProfile = () => {
                                 <div className="admin-users__username">username</div>
                             </div>
                             <div className="admin-users__option">
-                                <button className="admin-users__btn">View profile</button>
-                                <button className="admin-users__btn">Edit profile</button>
-                                <button className="admin-users__btn">Stop profile</button>
-                                <button className="admin-users__btn">Delete profile</button>
+                                <button className="button_m admin-users__btn">View profile</button>
+                                <button className="button_m admin-users__btn">Edit profile</button>
+                                <button className="button_m admin-users__btn">Stop profile</button>
+                                <button className="button_m admin-users__btn">Delete profile</button>
                             </div>
                         </div>
                     </div>
