@@ -4,6 +4,7 @@ import { AuthContext } from "../../../context";
 import MyButton from "../button/MyButton";
 import MyModal from "../MyModal/MyModal";
 import PostForm from "../../PostForm";
+import IMG1 from "../../../img/menu.png"
 
 const Navbar = () => {
     const {isAuth, setIsAuth} = useContext(AuthContext);
@@ -67,7 +68,7 @@ const Navbar = () => {
 
                     </div>
                     <div className="col-6 d-flex justify-content-end d-lg-none">
-                        <img  alt="" className="header-burger" data-bs-toggle="offcanvas"
+                        <img src={IMG1} alt="" className="header-burger" data-bs-toggle="offcanvas"
                              data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"/>
                     </div>
                     <div className="offcanvas offcanvas-top header-offcanvas" tabIndex="-1" id="offcanvasTop"
