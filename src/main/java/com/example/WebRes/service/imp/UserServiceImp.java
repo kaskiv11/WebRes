@@ -71,12 +71,6 @@ public class UserServiceImp implements UserService {
     public User findUserByPhone(String phone) {
         return userRepository.findUserByPhone(phone);
     }
-
-    @Override
-    public List<User> allUsers() {
-        return (List<User>) userRepository.findAll();
-    }
-
     @Override
     public void updateUser(User user) {
 
@@ -92,6 +86,16 @@ public class UserServiceImp implements UserService {
 
         userRepository.save(user);
     }
+
+
+    @Override
+    public List<User> allUsers() {
+        return (List<User>) userRepository.findAll();
+    }
+
+
+
+
 }
 
 
