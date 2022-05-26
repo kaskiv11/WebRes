@@ -14,7 +14,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.*;
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+>>>>>>> origin/WebRes_003
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -49,6 +56,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
         }
     }
+<<<<<<< HEAD
     @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
     public ResponseEntity<User> editUser(@PathVariable("id") long id, @RequestBody User user) {
 
@@ -63,6 +71,8 @@ public class UserController {
         userService.updateUser(currentUser);
         return new ResponseEntity<User>(currentUser, HttpStatus.OK);
     }
+=======
+>>>>>>> origin/WebRes_003
 
 
 }
