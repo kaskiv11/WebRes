@@ -13,6 +13,7 @@ import Pagination from "../components/UI/pagination/Pagination";
 import {useObserver} from "../hooks/useObserver";
 import MySelect from "../components/UI/select/MySelect";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import IMG1 from '../img/Group.png';
 
 import {Link} from "react-router-dom";
 
@@ -74,7 +75,7 @@ function Posts() {
                                         </Link>
                                     </div>
                                     <div className="col-6 content_image d-none d-lg-flex">
-                                        <img alt="" />
+                                        <img alt="" src={IMG1}/>
                                     </div>
                                 </div>
                             </div>

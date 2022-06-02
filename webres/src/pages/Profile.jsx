@@ -43,7 +43,7 @@ const Profile = () => {
                     </div>
                     <Tabs>
                         <div className="row mb-5">
-                        <div className="col-2">
+                        <div className="col-12 col-lg-2 mb-5">
                             <div className="profile-tabs">
                                 <TabList>
                                     <Tab>
@@ -58,14 +58,17 @@ const Profile = () => {
                                     <Tab>
                                         <div className="profile-tabs__admin"></div>
                                     </Tab>
+
+                                    <div className="profile-post__add-plus"></div>
+
                                 </TabList>
                             </div>
                         </div>
-                        <div className="col-10">
+                        <div className="col-12 col-lg-10">
                             <TabPanel>
                                 <div className="profile-post">
                                     <div className="row">
-                                        <div className="col-4">
+                                        {/*<div className="col-4">
                                             <div className="profile-post__add-projects cursor-pointer
                                     d-flex flex-column justify-content-center align-items-center">
                                                 <div className="profile-post__add-plus"></div>
@@ -73,25 +76,27 @@ const Profile = () => {
                                                     Add projects
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-4">
+                                        </div>*/}
+                                        <div className="col-12 col-md-6 col-lg-4">
                                             <div className="post">
                                                 <div className="post__content ratio ratio-4x3">
-                                                    onClick={() => router.push(`/posts/${post.id}`)}
                                                     <img src={img} alt="" className="post__img" />
                                                 </div>
-                                                <div className="post__btns d-flex">
-                                                    <div className="d-flex">
-                                                        <div className="cursor-pointer">
-                                                            {post.id})
-                                                        </div>
+                                                <div className="post__info d-flex align-items-center">
+                                                    <div className="post__info-img cursor-pointer" >
+                                                        {post.id})
+                                                    </div>
+                                                    <div className="post__info-username cursor-pointer">
                                                         {post.title}
+                                                    </div>
+                                                    <div className="post__info-like d-flex align-items-center">
+                                                        99
+                                                    </div>
+                                                    <div className="post__info-comments d-flex align-items-center">
+                                                        15
                                                     </div>
                                                 </div>
                                             </div>
-                                            {/*<MyModal visible={modal} setVisible={setModal}>*/}
-                                            {/*    <ModalPostWindow/>*/}
-                                            {/*</MyModal>*/}
                                         </div>
                                     </div>
 
@@ -100,23 +105,25 @@ const Profile = () => {
                                 </div>
                             </TabPanel>
                             <TabPanel>
-                                <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div className="post">
-                                        <div className="post__content ratio ratio-4x3">
-                                            <img src={img} alt="" className="post__img" />
-                                        </div>
-                                        <div className="post__info d-flex align-items-center">
-                                            <div className="post__info-img cursor-pointer">
-                                                12
+                                <div className="row">
+                                    <div className="col-12 col-md-6 col-lg-4">
+                                        <div className="post">
+                                            <div className="post__content ratio ratio-4x3">
+                                                <img src={img} alt="" className="post__img" />
                                             </div>
-                                            <div className="post__info-username cursor-pointer">
-                                                username
-                                            </div>
-                                            <div className="post__info-like d-flex align-items-center">
-                                                99
-                                            </div>
-                                            <div className="post__info-comments d-flex align-items-center">
-                                                15
+                                            <div className="post__info d-flex align-items-center">
+                                                <div className="post__info-img cursor-pointer" >
+                                                    {post.id})
+                                                </div>
+                                                <div className="post__info-username cursor-pointer">
+                                                    {post.title}
+                                                </div>
+                                                <div className="post__info-like d-flex align-items-center">
+                                                    99
+                                                </div>
+                                                <div className="post__info-comments d-flex align-items-center">
+                                                    15
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

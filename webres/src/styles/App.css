@@ -26,6 +26,11 @@ body{
     position: fixed;
 }
 
+a{
+    color: #000!important;
+    text-decoration: none!important;
+}
+
 .btn {
     background: #782AD5!important;
     border: 1px solid #782AD5!important;
@@ -34,11 +39,6 @@ body{
     padding: 10px 30px!important;
     border-radius: 50px!important;
     transition: 0.3s;
-}
-
-.btn:hover{
-    background: #FFF!important;
-    color: #782AD5!important;
 }
 
 .btn-invert {
@@ -52,6 +52,21 @@ body{
     transition: 0.3s;
 }
 
+.btn-invert a {
+    color: #782AD5;
+    text-decoration: none;
+}
+
+.btn a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: #FFF!important;
+    color: #782AD5!important;
+}
+
 .btn-invert:hover{
     background: #782AD5;
     color: #FFF;
@@ -59,14 +74,13 @@ body{
 
 .btn-close-post{
     background: url("../img/close.png") no-repeat center center / cover;
-    width: 30px!important;
-    height: 30px!important;
+    width: 25px!important;
+    height: 25px!important;
     border: none;
+    margin-left: 10px;
+    order: 3;
 }
 
-a:hover {
-    color: #000!important;
-}
 
 .cursor-pointer{
     cursor: pointer;
@@ -388,10 +402,27 @@ a:hover {
     height: 50px;
     overflow: hidden;
     margin-right: 16px;
+    order:1;
+}
+
+.post-wrap__username{
+    order: 2;
+}
+
+.post-wrap__post-title{
+    order:3
+}
+
+.post-wrap__info{
+    order: 1;
 }
 
 .post-wrap__info span{
     margin: 0 10px;
+}
+
+.post-wrap__buttons{
+    order: 2;
 }
 
 .post-wrap__buttons button:not(:last-child){
@@ -412,6 +443,13 @@ a:hover {
 .post-wrap__btn-like:hover::before{
     transition: 0.3s;
     background: url("../img/Like-hover.svg") no-repeat center center / cover;
+}
+
+.post-comments__name{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
 }
 
 /* login --------------------------------------*/
@@ -622,11 +660,11 @@ a:hover {
 }
 
 .profile-post__add-plus{
-    background: url("../img/add.png") no-repeat center center / cover;
-    width: 80px!important;
-    height: 80px!important;
-    display: block;
-    margin-bottom: 10px;
+    background: url("../img/plussss.svg") no-repeat center center / cover;
+    width: 50px!important;
+    height: 50px!important;
+    display: inline-block;
+    margin: 6px 12px;
 }
 
 .profile-post__add-project{
@@ -638,6 +676,9 @@ a:hover {
     width: 110px;
     background: #E1DEDE;
     border-radius: 20px;
+    /*position: absolute;
+    top: 50%;
+    left: 0;*/
 }
 
 .react-tabs__tab-list{
@@ -791,7 +832,7 @@ a:hover {
 /* start section on the posts page*/
 
 .background{
-    background: #D8E8FF /*url("../img/Vector 7.png") no-repeat center center / cover*/;
+    background: #D8E8FF url("../img/Vector 7.png") no-repeat center center / cover;
     margin-bottom: 40px;
 }
 
@@ -940,11 +981,21 @@ button, select{
     margin-right: 20px!important;
 }
 
+.modal-profile__wrap{
+    position: relative;
+}
+
 /* Media */
 
 /* Large: 992px - 1199px */
 @media (max-width: 1199px) {
-
+    .post-wrap .carousel-container{
+        height: 500px!important;
+    }
+    .admin-users__btn{
+        font-size: 14px;
+        padding: 5px 10px;
+    }
 }
 
 /* Medium: 768px - 991px */
@@ -968,6 +1019,50 @@ button, select{
         background: linear-gradient(45deg, #8D36AB 0%, #640CCE 100%);
         margin-bottom: 40px;
     }
+    .post-wrap__buttons{
+        order:3;
+        justify-content: end;
+        margin-top: 20px;
+    }
+    .btn-close-post{
+        order:2;
+        justify-content: flex-end;
+    }
+    .post-wrap__post-title{
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .post-wrap__photo-user{
+        order: 2;
+    }
+    .post-wrap__username{
+        order: 3;
+    }
+    .post-wrap__header{
+        position: relative;
+    }
+    .btn-close-post{
+        margin: 0;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+    .profile-tabs{
+        width: 100%;
+        padding: 20px;
+    }
+    .profile-tabs .react-tabs__tab-list{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .profile-tabs .react-tabs__tab:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    .post-filter{
+        width: 100%;
+    }
 }
 
 /* Small: 576px - 767px */
@@ -985,6 +1080,15 @@ button, select{
     .footer__description{
         margin: 30px 0;
     }
+    .post-wrap .carousel-container{
+        height: 350px!important;
+    }
+    .post-wrap .thumbnails  .thumbnail{
+        height: 100px!important;
+    }
+    .profile-tab-edit__general .form-control-file{
+        width: 75%;
+    }
 }
 
 /* Extra small: 0px (320px) - 575px */
@@ -995,5 +1099,66 @@ button, select{
     }
     .site_descr{
         width: 100%;
+    }
+    .post-wrap .thumbnails  .thumbnail{
+        height: 75px!important;
+        width: 150px!important;
+    }
+    .post-comments__name > div{
+        margin-left: 10px;
+    }
+    .post-wrap .box{
+        margin-left: -15px!important;
+        margin-right: -15px!important;
+    }
+    .profile-post__add-plus,
+    .profile-tabs .react-tabs__tab div{
+        width: 25px!important;
+        height: 25px!important;
+    }
+    .profile-tabs .react-tabs__tab .profile-tabs__edit{
+        width: 30px!important;
+    }
+    .other_photos__photo{
+        width: 150px;
+        height: 100px;
+    }
+    .other_photos__item input-group{
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+         padding: 0 15px;
+         width: auto;
+     }
+    .sign_up,
+    .join{
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+    .form-header{
+        padding: 20px 0;
+    }
+
+    .sign_up{
+        border-bottom: none;
+    }
+    .join{
+        border-top: none;
+        margin-top: 0;
+    }
+    .post-wrap .carousel-container{
+        height: 200px!important;
+    }
+    .post-comments-add__form button{
+        margin-left: -15px;
+        width: 70px;
+        padding-left: 5px!important;
+    }
+    .profile-tab-edit__general .form-control-file{
+        width: 50%;
     }
 }

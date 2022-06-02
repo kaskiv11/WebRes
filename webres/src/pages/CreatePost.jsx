@@ -11,7 +11,7 @@ const CreatePost = () => {
                     </div>
                 </div>
                 <div className="row justify-content-md-center">
-                    <div className="col-10">
+                    <div className="col-12 col-lg-10">
                         <form action="" className="profile-tab-edit__general">
                             <div className="col-12">
                                 <div className="main_photo">
@@ -22,43 +22,15 @@ const CreatePost = () => {
                             </div>
                             <div className="col-12">
                                 <div className="other_photos">
-                                    <div className="other_photos__item d-flex align-items-center justify-content-between">
-                                        <div className="col-5">
+                                    <div className="other_photos__item d-flex align-items-center justify-content-between flex-wrap">
+                                        <div className="col-12 col-lg-4">
                                             <img className="other_photos__photo" src=" " alt=""></img>
                                         </div>
-                                        <div className="col-7">
-                                            <div className="input-group justify-content-end">
-                                                <input type="file" className="button_m" id="inputGroupFile04"
+                                        <div className="col-12 col-lg-8 mt-3">
+                                            <div className="input-group justify-content-start justify-content-lg-end">
+                                                <input type="file" className="button_m w-75" id="inputGroupFile04"
                                                        aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                                <button className=" button_m" type="button"
-                                                        id="inputGroupFileAddon04">Button
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="other_photos__item d-flex align-items-center justify-content-between">
-                                        <div className="col-5">
-                                            <img className="other_photos__photo" src=" " alt=""></img>
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="input-group justify-content-end">
-                                                <input type="file" className="button_m" id="inputGroupFile04"
-                                                       aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                                <button className=" button_m" type="button"
-                                                        id="inputGroupFileAddon04">Button
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="other_photos__item d-flex align-items-center justify-content-between">
-                                        <div className="col-5">
-                                            <img className="other_photos__photo" src=" " alt=""></img>
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="input-group justify-content-end">
-                                                <input type="file" className="button_m" id="inputGroupFile04"
-                                                       aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                                <button className=" button_m" type="button"
+                                                <button className=" button_m w-25" type="button"
                                                         id="inputGroupFileAddon04">Button
                                                 </button>
                                             </div>
