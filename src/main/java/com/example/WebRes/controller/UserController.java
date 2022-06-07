@@ -22,10 +22,10 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/user")
-@Log4j
 @AllArgsConstructor
 public class UserController {
 
@@ -36,11 +36,12 @@ public class UserController {
     @Autowired
     PostContentServiceImp postContentService;
 
-
+    static final Logger log = Logger.getLogger(String.valueOf(UserController.class));
 
     @PostMapping("/post/save")
     public RedirectView saveUser(Post post,
                                  @RequestParam("image") MultipartFile multipartFile) throws IOException {
+        log.info("Save post method post");
 
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         post.setImage(fileName);
