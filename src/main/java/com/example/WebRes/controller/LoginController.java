@@ -1,6 +1,5 @@
 package com.example.WebRes.controller;
 
-import com.example.WebRes.repository.UserRepository;
 import com.example.WebRes.service.imp.UserServiceImp;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
