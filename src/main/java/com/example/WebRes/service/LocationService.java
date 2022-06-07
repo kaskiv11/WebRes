@@ -1,10 +1,7 @@
 package com.example.WebRes.service;
 
-import com.example.WebRes.entity.User;
-import org.springframework.stereotype.Service;
-
-
 import com.example.WebRes.entity.Location;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service

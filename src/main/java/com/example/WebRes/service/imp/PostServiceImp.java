@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -18,15 +17,14 @@ public class PostServiceImp implements PostService {
     @Autowired
     PostRepository postRepository;
     @Override
-    public boolean createPost(Post post) {
+    public Post createPost(Post post) {
         List<PostContent> postContents = new ArrayList<>();
         post.setPostContents(postContents);
         List<Comment> commentList = new ArrayList<>();
         post.setComments(commentList);
         post.setStatus(Status.ACTIVE);
         postRepository.save(post);
-        return true;
-
+        return post;
     }
 
     @Override

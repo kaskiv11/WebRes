@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
@@ -32,6 +31,8 @@ public class Post {
     @Column(name = "status")
     private Status status;
 
+    @Column(name = "image")
+    private String  image;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<PostContent> postContents;
