@@ -44,9 +44,11 @@ const Navbar = () => {
                         {/*</MyModal>*/}
                         {isAuth ?
                             <div className={'d-flex'}>
-                                <MyButton className={'navbar__add-project btn'} onClick={() => setModal(true)}>
-                                    Add Project
-                                </MyButton>
+                                <Link to="/create">
+                                    <MyButton className={'navbar__add-project btn'} /*onClick={() => setModal(true)}*/>
+                                        Add Project
+                                    </MyButton>
+                                </Link>
                                 <MyButton onClick={logout} className={'btn-invert'}>
                                     Log out
                                 </MyButton>

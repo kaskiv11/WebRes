@@ -985,6 +985,171 @@ button, select{
     position: relative;
 }
 
+.descr_title_upl {
+    text-align: center;
+    color: #64606D;
+    font-size: 24px;
+    font-family: 'Sen', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ul_upload {
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    color: #64606D;
+}
+
+
+/* Contact */
+
+.contact_main{
+    background-color: rgba(175, 147, 255, 0.26);
+    padding-bottom: 80px;
+}
+
+.ques_wrapper{
+    max-width: 1264px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+.questions_contact{
+    color: #64606D;
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 200;
+}
+.questions_contact span{
+    color: #782AD5;
+}
+
+.main_content_contact{
+    background-color: #ffffff;
+    border: 1px #BDBDBD solid;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    padding: 90px 31px;
+}
+
+.contact_title{
+    font-size: 36px;
+    color: #782AD5;
+    font-family: 'Sen', sans-serif;
+    margin-bottom: 30px;
+}
+.contact_about{
+    color: #64606D;
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+    margin-bottom: 40px;
+}
+
+.contact_info_bloc{
+    background-color: rgba(234, 227, 255, 0.4);
+    padding: 30px 20px;
+}
+.contact_wrap, .contact_wrap_all{
+    display: flex;
+    flex-direction: column;
+}
+.contact_wrap:not(:first-child){
+    padding-top: 30px;
+}
+.contact_our_desc_email, .contact_our_desc_phone, .contact_our_desc_telegram{
+    color: #782AD5;
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    font-weight: 200;
+}
+.contact_our_email, .contact_our_phone, .contact_our_telegram{
+    font-family: 'Sen', sans-serif;
+    color: #64606D;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+
+.desc_input{
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    padding-left: 44px;
+
+}
+.text_fild_contact{
+    width: 100%;
+    height: 62px;
+    margin: 10px auto;
+    background: #ffffff;
+    border-radius: 30px;
+    border: 1px solid #9D9D9D;
+    display: flex;
+}
+.cont_name, .cont_em{
+    color: #9D9D9D;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    padding-left: 34px;
+    border-radius: 30px;
+}
+.cont_mes{
+    color: #9D9D9D;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Sen', sans-serif;
+    padding: 17px 0 10px 34px ;
+    border-radius: 30px;
+    outline: none;
+}
+
+.main_content_contact input{
+    outline: none;
+    border: none;
+}
+
+.text_fild_contact_mes{
+    width: 100%;
+    height: auto;
+}
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder { opacity: 1; transition: opacity 0.3s ease; }
+textarea::-webkit-input-placeholder { opacity: 1; transition: opacity 0.3s ease; }
+textarea:focus::-moz-placeholder { opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.3s ease; }
+
+.button_mnn{
+    background-color: #ffffff;
+    border: #9D9D9D solid 1px;
+    border-radius: 15px;
+    color: #9D9D9D;
+    text-align: center;
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.button_pub_send{
+    width: 153px;
+    background-color: #7044EB;
+    color: #ffffff;
+    margin: 20px 25px;
+}
 /* Media */
 
 /* Large: 992px - 1199px */
