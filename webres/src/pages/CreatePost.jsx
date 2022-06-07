@@ -1,4 +1,5 @@
 import React from 'react';
+import IMG1 from "../img/Іmage.png";
 
 const CreatePost = () => {
     return (
@@ -11,55 +12,60 @@ const CreatePost = () => {
                     </div>
                 </div>
                 <div className="row justify-content-md-center">
-                    <div className="col-10">
+                    <div className="col-12 col-lg-10">
                         <form action="" className="profile-tab-edit__general">
                             <div className="col-12">
                                 <div className="main_photo">
                                     <div className="ratio ratio-4x3">
                                         <img className="photo_one" src=" " alt=""></img>
+                                        <div className="upload_file d-flex justify-content-center align-items-center flex-column">
+                                            <div className="upload_photo">
+                                                <img src={IMG1} alt=""></img>
+                                            </div>
+                                            <div className="upload_descr">
+                                                <h3 className="descr_title_upl">Drag and drop an image, or Browser</h3>
+                                                <div className="ul_upl d-flex justify-content-between mt-5">
+                                                    <div className="ul_one me-5">
+                                                        <ul type="disc" className="ul_upload">
+                                                            <li>High resolution image (png, jpg, svg)</li>
+                                                            <li>Different projects (C, C++, Java, JavaScript, <br></br> HTML,
+                                                                CSS, Python, PHP)</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div className="ul_two">
+                                                        <ul type="disc" className="ul_upload">
+                                                            <li>Videos (mp4, avi, wmv)</li>
+                                                            <li>Animated gifs</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div className="upload_rectg">
+                                                <div className="rectg_1"></div>
+                                                <div className="rectg_2"></div>
+                                                <div className="rectg_3"></div>
+                                                <div className="rectg_4"></div>
+                                                <div className="rectg_5"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12">
                                 <div className="other_photos">
-                                    <div className="other_photos__item d-flex align-items-center justify-content-between">
-                                        <div className="col-5">
+                                    <div className="other_photos__item d-flex align-items-center justify-content-between flex-wrap">
+                                        <div className="col-12 col-lg-4">
                                             <img className="other_photos__photo" src=" " alt=""></img>
                                         </div>
-                                        <div className="col-7">
-                                            <div className="input-group justify-content-end">
-                                                <input type="file" className="button_m" id="inputGroupFile04"
+                                        <div className="col-12 col-lg-8 mt-3">
+                                            <div className="input-group justify-content-start justify-content-lg-end">
+                                                <input type="file" className="button_m w-75" id="inputGroupFile04"
                                                        aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                                <button className=" button_m" type="button"
-                                                        id="inputGroupFileAddon04">Button
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="other_photos__item d-flex align-items-center justify-content-between">
-                                        <div className="col-5">
-                                            <img className="other_photos__photo" src=" " alt=""></img>
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="input-group justify-content-end">
-                                                <input type="file" className="button_m" id="inputGroupFile04"
-                                                       aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                                <button className=" button_m" type="button"
-                                                        id="inputGroupFileAddon04">Button
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="other_photos__item d-flex align-items-center justify-content-between">
-                                        <div className="col-5">
-                                            <img className="other_photos__photo" src=" " alt=""></img>
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="input-group justify-content-end">
-                                                <input type="file" className="button_m" id="inputGroupFile04"
-                                                       aria-describedby="inputGroupFileAddon04" aria-label="Upload"></input>
-                                                <button className=" button_m" type="button"
-                                                        id="inputGroupFileAddon04">Button
+                                                <button className=" button_m w-25" type="button"
+                                                        id="inputGroupFileAddon04">Delete
                                                 </button>
                                             </div>
                                         </div>
@@ -98,7 +104,6 @@ const CreatePost = () => {
                     </div>
                 </div>
             </div>
-
         </main>
     );
 };

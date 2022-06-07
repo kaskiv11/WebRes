@@ -43,26 +43,28 @@ const Navbar = () => {
                         {/*    <PostForm create={createPost}/>*/}
                         {/*</MyModal>*/}
                         {isAuth ?
-                            <div>
-                                <MyButton className={'navbar__add-project btn'} onClick={() => setModal(true)}>
-                                    Add Project
-                                </MyButton>
+                            <div className={'d-flex'}>
+                                <Link to="/create">
+                                    <MyButton className={'navbar__add-project btn'} /*onClick={() => setModal(true)}*/>
+                                        Add Project
+                                    </MyButton>
+                                </Link>
                                 <MyButton onClick={logout} className={'btn-invert'}>
                                     Log out
                                 </MyButton>
                             </div>
                             :
                             <div className={'d-flex'}>
-                                <MyButton className={'btn'}>
-                                    <Link to="/login">
-                                        Login
-                                    </Link>
-                                </MyButton>
-                                <MyButton className={'btn-invert'}>
-                                    <Link to="/registration">
-                                        Sign Up
-                                    </Link>
-                                </MyButton>
+                                <Link to="/login" className="navbar__add-project">
+                                    <MyButton className={'btn'}>
+                                            Login
+                                    </MyButton>
+                                </Link>
+                                <Link to="/registration">
+                                    <MyButton className={'btn-invert'}>
+                                            Sign Up
+                                    </MyButton>
+                                </Link>
                             </div>
                         }
 
@@ -80,15 +82,15 @@ const Navbar = () => {
                         </div>
                         <div className="offcanvas-body">
                             <div className="col-12 d-flex justify-content-center">
-                                <div className="navbar__links d-flex align-items-center flex-column">
+                                <div className="navbar__links d-flex align-items-center flex-column" data-bs-dismiss="offcanvas">
                                     <Link to="/posts">Posts</Link>
                                     <Link to="/about">About</Link>
                                     <Link to="/contact">Contact</Link>
                                 </div>
                             </div>
-                            <div className="col-12 d-flex justify-content-center mt-5">
+                            <div className="col-12">
                                 {isAuth ?
-                                    <div>
+                                    <div className="d-flex justify-content-center mt-5">
                                         <MyButton className={'navbar__add-project btn'} data-bs-dismiss="offcanvas">
                                             Add Project
                                         </MyButton>
@@ -97,8 +99,8 @@ const Navbar = () => {
                                         </MyButton>
                                     </div>
                                     :
-                                    <div className={'d-flex'}>
-                                        <MyButton className={'btn'} data-bs-dismiss="offcanvas">
+                                    <div className="d-flex justify-content-center mt-5">
+                                        <MyButton className={'navbar__add-project btn '} data-bs-dismiss="offcanvas">
                                             <Link to="/login">
                                                 Login
                                             </Link>
