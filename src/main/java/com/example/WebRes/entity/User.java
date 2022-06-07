@@ -10,7 +10,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -61,7 +60,7 @@ public class User {
     //@ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     //@CollectionTable(name = "user_role", joinColumns = @JoinColumn(referencedColumnName = "user_id"))
     //@Enumerated(EnumType.STRING)
-    private Role role;
+    private String role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<UserInterest> userInterests;

@@ -1,7 +1,6 @@
 package com.example.WebRes.service;
 
 import com.example.WebRes.entity.Category;
-import com.example.WebRes.entity.Comment;
 
 import java.util.List;
 
