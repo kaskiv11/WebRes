@@ -1,4 +1,5 @@
 import axios from "axios";
+import {API_BASE_URL} from '../constants/index'
 
 export default class PostService {
     static async getAll(limit = 16, page = 1) {
