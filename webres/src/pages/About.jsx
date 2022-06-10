@@ -8,7 +8,6 @@ const About = () => {
                     About
                 </h1>
             </div>
-
         </main>
     );
 };

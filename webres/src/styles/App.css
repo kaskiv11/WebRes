@@ -925,11 +925,12 @@ button, select{
 
 .other_photos__photo{
     width: 203px;
-    height: 142px;
+    height: 203px;
     border-radius: 20px;
     background-color: rgba(175, 147, 255, 0.26);
     outline: none;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .other_photos__item:not(:last-child){
@@ -1286,7 +1287,7 @@ textarea:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.3s
     }
     .other_photos__photo{
         width: 150px;
-        height: 100px;
+        height: 150px;
     }
     .other_photos__item input-group{
         width: 100%;
