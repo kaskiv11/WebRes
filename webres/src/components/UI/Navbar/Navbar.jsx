@@ -91,9 +91,11 @@ const Navbar = () => {
                             <div className="col-12">
                                 {isAuth ?
                                     <div className="d-flex justify-content-center mt-5">
-                                        <MyButton className={'navbar__add-project btn'} data-bs-dismiss="offcanvas">
-                                            Add Project
-                                        </MyButton>
+                                        <Link to="/create">
+                                            <MyButton className={'navbar__add-project btn'} data-bs-dismiss="offcanvas">
+                                                Add Project
+                                            </MyButton>
+                                        </Link>
                                         <MyButton onClick={logout} className={'btn-invert'} data-bs-dismiss="offcanvas">
                                             Log out
                                         </MyButton>
