@@ -9,6 +9,7 @@ import { Carousel } from 'react-carousel-minimal';
 import img1 from "../img/slider/greg-banek-U7gWXwap7Kg-unsplash.jpg";
 import img2 from "../img/slider/marek-piwnicki-piat4gc2CKo-unsplash.jpg";
 import img3 from "../img/slider/windows-QKuAz8zJRng-unsplash.jpg";
+import img4 from "../img/Usign-Gradients-Featured-Image.png";
 
 const PostIdPage = () => {
     const params = useParams()
@@ -78,17 +79,18 @@ const PostIdPage = () => {
                     <div className="row">
                         <div className="post-wrap">
                             <div className="col-12 d-flex align-items-center post-wrap__header flex-wrap">
-                                <div className="col-10 col-lg-8 d-flex align-items-center post-wrap__info flex-wrap">
-                                    <img src="" alt="user" className="post-wrap__photo-user"/>
-                                    <div className="post-wrap__username">
-                                        username: {post.id}
-                                    </div>
-                                    <div className="post-wrap__post-title">
-                                        title: {post.title}
+                                <div className="col-11 col-lg-8 d-flex align-items-center post-wrap__info">
+                                    <img src={img4} alt="user" className="post-wrap__photo-user"/>
+                                    <div className="d-flex flex-column justify-content-between">
+                                        <div className="post-wrap__username">
+                                            username: {post.id}
+                                        </div>
+                                        <div className="post-wrap__post-title">
+                                            title: {post.title}
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div className="col-12 col-lg-3 post-wrap__buttons d-flex align-items-center">
+                                <div className="col-12 col-lg-3 post-wrap__buttons d-flex align-items-center justify-content-end mt-4 mt-lg-0">
                                     <MyButton className="btn post-wrap__btn-like d-flex">
                                         Like
                                     </MyButton>
@@ -101,26 +103,6 @@ const PostIdPage = () => {
                             </div>
                         </div>
                     </div>
-                    {/*<div className="row">
-                        <div className="col-8 m-auto">
-                            <div className="post-wrap">
-                                <div className="post-wrap__main-photo">
-                                    <img src={img} alt="" className="post__img post-wrap__img" />
-                                </div>
-                                <div className="post-wrap__all-photo d-flex justify-content-center">
-                                    <div className="post-wrap__photo-item ratio ratio-4x3 active">
-                                        <img src={img} alt="" className="post__img post-wrap__img" />
-                                    </div>
-                                    <div className="post-wrap__photo-item ratio ratio-4x3">
-
-                                    </div>
-                                    <div className="post-wrap__photo-item ratio ratio-4x3">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>*/}
                     <div className="row">
                         <div className="col-12 col-lg-10 m-auto">
                             <div className="post-wrap">
@@ -201,14 +183,14 @@ const PostIdPage = () => {
                                     <div className="col-11 m-auto col-lg-10">
                                         <form className="post-comments-add__form">
                                             <div className="row">
-                                                <div className="col-2 col-lg-1">
+                                                <div className="col-6 col-md-2 col-lg-1 order-2 order-md-1 d-flex align-items-center">
                                                     <div className="post-comments-add__smile"></div>
                                                 </div>
-                                                <div className="col-7 col-lg-9">
-                                                    <textarea type="textarea" className="post-comments-add__form-control"
+                                                <div className="col-12 col-md-7 col-lg-9 order-1 order-md-2">
+                                                    <textarea type="textarea" className="post-comments-add__form-control cont_mes"
                                                               id="exampleInputPassword1" placeholder="Add a comment..." rows="1"></textarea>
                                                 </div>
-                                                <div className="col-3 col-lg-2">
+                                                <div className="col-6 col-md-3 col-lg-2 order-3 order-md-3">
                                                     <button type="submit" className="btn btn-primary">Submit</button>
                                                 </div>
                                             </div>

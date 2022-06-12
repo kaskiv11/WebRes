@@ -50,10 +50,10 @@ const CreatePost = () => {
                                                             <div className="upload_photo">
                                                                 <img src={IMG1} alt=""></img>
                                                             </div>
-                                                            <div className="upload_descr">
+                                                            <div className="col-12">
                                                                 <h3 className="descr_title_upl">Drag and drop an image, or Browser</h3>
-                                                                <div className="ul_upl d-flex justify-content-between mt-5">
-                                                                    <div className="ul_one me-5">
+                                                                <div className="d-none d-md-flex ul_upl d-flex justify-content-center mt-5">
+                                                                    <div className="ul_one me-2 me-lg-5">
                                                                         <ul type="disc" className="ul_upload">
                                                                             <li>High resolution image (png, jpg, svg)</li>
                                                                             <li>Different projects (C, C++, Java, JavaScript, <br></br> HTML,
