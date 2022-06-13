@@ -89,12 +89,14 @@ function Posts() {
                     <MyModal visible={modal} setVisible={setModal}>
                         <PostForm create={createPost}/>
                     </MyModal>
-                    <hr style={{margin: '15px 0'}}/>
-                    <PostFilter
-                        filter={filter}
-                        setFilter={setFilter}
-                    />
-                    <MySelect
+                    <hr style={{margin: '15px 0'}}/>*/}
+                    <div className="row">
+                        <div className="col-12 mb-4">
+                            <PostFilter
+                                filter={filter}
+                                setFilter={setFilter}
+                            />
+                            {/*<MySelect
                         value={limit}
                         onChange={value => setLimit(value)}
                         defaultValue="Number of elements per page"
@@ -105,9 +107,11 @@ function Posts() {
                             {value: -1, name: 'All'},
                         ]}
                     />*/}
-                    {postError &&
-                        <h1>Error ${postError}</h1>
-                    }
+                            {postError &&
+                                <h1>Error ${postError}</h1>
+                            }
+                        </div>
+                    </div>
                     <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Posts"/>
                     <div ref={lastElement} style={{height: 0, background: 'red'}}/>
                     {isPostsLoading &&
