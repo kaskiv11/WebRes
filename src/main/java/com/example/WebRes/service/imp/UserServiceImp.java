@@ -33,13 +33,13 @@ public class UserServiceImp implements UserService {
             return false;
         }
 
-        List<UserInterest> userInterests = new ArrayList<>();
-        user.setUserInterests(userInterests);
-        List<Follower> followerList = new ArrayList<>();
-        user.setFollowers(followerList);
-        //user.setRole(Role.USER);
-        user.setIsActive(true);
-        user.setIsFrozen(false);
+//        List<UserInterest> userInterests = new ArrayList<>();
+//        user.setUserInterests(userInterests);
+//        List<Follower> followerList = new ArrayList<>();
+//        user.setFollowers(followerList);
+//        //user.setRole(Role.USER);
+//        user.setIsActive(true);
+//        user.setIsFrozen(false);
 
         userRepository.save(user);
         return true;
@@ -66,7 +66,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public User findUserByLastName(String lastName) {
-        return userRepository.findUserByLastName(lastName);
+        return userRepository.findUserByName(lastName);
     }
 
     @Override

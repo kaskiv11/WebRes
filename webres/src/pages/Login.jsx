@@ -3,6 +3,7 @@ import MyInput from "../components/UI/input/MyInput";
 import MyButton from "../components/UI/button/MyButton";
 import {AuthContext} from "../context";
 import {Link} from "react-router-dom";
+import { login } from '../../util/APIUtils';
 
 const Login = () => {
     const {isAuth, setIsAuth} = useContext(AuthContext);
@@ -10,6 +11,8 @@ const Login = () => {
     const login = event => {
         event.preventDefault();
         setIsAuth(true);
+
+
         localStorage.setItem('auth', 'true')
     }
 
@@ -52,5 +55,53 @@ const Login = () => {
         </main>
     );
 };
+
+class LoginForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        };
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleInputChange(event) {
+        const target = event.target;
+        const inputName = target.name;
+        const inputValue = target.value;
+
+        this.setState({
+            [inputName] : inputValue
+        });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+
+
+    }
+
+    render() {
+        return (
+            <form onSubmit={this.handleSubmit}>
+                <div className="form-item">
+                    <input type="email" name="email"
+                           className="form-control" placeholder="Email"
+                           value={this.state.email} onChange={this.handleInputChange} required/>
+                </div>
+                <div className="form-item">
+                    <input type="password" name="password"
+                           className="form-control" placeholder="Password"
+                           value={this.state.password} onChange={this.handleInputChange} required/>
+                </div>
+                <div className="form-item">
+                    <button type="submit" className="btn btn-block btn-primary">Login</button>
+                </div>
+            </form>
+        );
+    }
+}
 
 export default Login;

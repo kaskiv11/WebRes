@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class MyUserDetailsService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
-    static final org.apache.logging.log4j.Logger logger = (org.apache.logging.log4j.Logger) Logger.getLogger(String.valueOf(MyUserDetailsService.class));
+    //static final org.apache.logging.log4j.Logger logger = (org.apache.logging.log4j.Logger) Logger.getLogger(String.valueOf(MyUserDetailsService.class));
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -25,7 +25,7 @@ public class MyUserDetailsService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User not found");
         }
-        logger.info("loadUserByUsername() : { "+ user.getEmail()+ " }");
+        //logger.info("loadUserByUsername() : { "+ user.getEmail()+ " }");
         return new MyUserDetails(user);
     }
 }
