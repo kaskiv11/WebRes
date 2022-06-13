@@ -1,8 +1,6 @@
 package com.example.WebRes.service.imp;
 
-import com.example.WebRes.entity.Enum.Role;
 import com.example.WebRes.entity.Follower;
-import com.example.WebRes.entity.Location;
 import com.example.WebRes.entity.User;
 import com.example.WebRes.entity.UserInterest;
 import com.example.WebRes.repository.UserRepository;
@@ -12,7 +10,6 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +38,8 @@ public class UserServiceImp implements UserService {
         List<Follower> followerList = new ArrayList<>();
         user.setFollowers(followerList);
         //user.setRole(Role.USER);
+        user.setIsActive(true);
+        user.setIsFrozen(false);
 
         userRepository.save(user);
         return true;
