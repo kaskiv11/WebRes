@@ -8,7 +8,7 @@ public interface CommentService {
     boolean createComment(Comment comment);
     List<Comment> allComments();
     boolean deleteCommentById(Long commentId);
-    Comment findFollowerById(long commentId);
+    Comment findCommentById(long commentId);
     Comment findCommentByContent(String content);
     void UpdateComment(Comment comment);
 }
